@@ -161,3 +161,13 @@ for (const flight of flights.split('+')){
     const output = `${type.startsWith('_Delayed') ? '*':''} ${type.replaceAll('_',' ')} ${getCode(from)} ${getCode(to )} (${time.replace(':','h')})`;
     console.log(output.padStart(36));
 }
+
+
+(function (){
+    const header = document.querySelector('h1');
+    header.style.color = 'red';
+
+    document.querySelector("body").addEventListener('click',function(){
+        header.style.color == 'red'? header.style.color = 'blue': header.style.color='red';
+    })
+})();
